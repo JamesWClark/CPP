@@ -1,9 +1,16 @@
 #include <iostream>
 #include "Rectangle.h"
 
+int Rectangle::id = 0;
+
 Rectangle::Rectangle(double length, double width) {
 	l = length;
 	w = width;
+	id++;
+}
+
+double Rectangle::getID() {
+	return id;
 }
 
 double Rectangle::getL() {
@@ -24,6 +31,7 @@ double Rectangle::perimeter() {
 
 void Rectangle::print() {
 	std::cout << "Rectangle: " 
-		<< "Area = " << area()
+		<< "ID = " << getID()
+		<< ", Area = " << area()
 		<< ", Perimeter = " << perimeter() << std::endl;
 }

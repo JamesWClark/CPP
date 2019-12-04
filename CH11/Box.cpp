@@ -20,7 +20,8 @@ double Box::volume() {
 
 void Box::print() {
 	std::cout << "Box: " 
-		<< "Area = " << area()
+		<< "ID = " << getID()
+		<< ", Area = " << area()
 		<< ", Perimeter = " << perimeter() 
 		<< ", Volume = " << volume() << std::endl;
 }
