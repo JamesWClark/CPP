@@ -32,6 +32,12 @@ double Rectangle::perimeter() {
 void Rectangle::print() {
 	std::cout << "Rectangle: " 
 		<< "ID = " << getID()
+		<< ", Length = " << getL()
+		<< ", Width = " << getW()
 		<< ", Area = " << area()
 		<< ", Perimeter = " << perimeter() << std::endl;
+}
+
+Rectangle Rectangle::operator+(Rectangle rec) {
+	return Rectangle(l + rec.getL(), w + rec.getW());
 }

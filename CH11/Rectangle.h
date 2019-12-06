@@ -13,6 +13,8 @@ public:
 	double area();
 	double perimeter();
 	void print();
+
+	Rectangle operator + (Rectangle);
 };
 
 #endif
